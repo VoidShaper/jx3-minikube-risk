@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: VoidShaper
+    provider: github
+    repository: app-jenkins-x
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: voidshaper-app-jenkins-x
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/VoidShaper/app-jenkins-x.git
+  org: VoidShaper
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: app-jenkins-x
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/VoidShaper/app-jenkins-x
