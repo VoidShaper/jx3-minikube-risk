@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        VoidShaper/app-jenkins-x: true
         VoidShaper/jx3-minikube-risk: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        VoidShaper/app-jenkins-x: merge
         VoidShaper/jx3-minikube-risk: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - VoidShaper/jx3-minikube-risk
+        - VoidShaper/app-jenkins-x
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - VoidShaper/jx3-minikube-risk
+        - VoidShaper/app-jenkins-x
       target_url: http://dashboard-jx.192.168.49.2.nip.io
 kind: ConfigMap
 metadata:
